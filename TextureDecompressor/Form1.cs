@@ -17,12 +17,13 @@ namespace TextureDecompressor
     public partial class Form1 : Form
     {
         private string[] entryFiles;
+        private int count;
 
         public Form1()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text    += ".txt";
-            m_hFolderTextBox.Text       += "OutputDecompressed";
+            m_hExtensionTextBox.Text += ".txt";
+            m_hFolderTextBox.Text += "OutputDecompressed";
             WindowRenderer.Init();
         }
 
@@ -41,6 +42,7 @@ namespace TextureDecompressor
                     {
                         string files = Path.GetFileName(path);
                         m_hListBox.Items.Add(files);
+                        m_hLabelCount.TextChanged += M_hLabelCount_TextChanged;
                     }
 
                     try
@@ -57,6 +59,14 @@ namespace TextureDecompressor
                         MessageBox.Show(ex.Message);
                     }
                 }
+            }
+        }
+
+        private void M_hLabelCount_TextChanged(object sender, EventArgs e)
+        {
+            foreach (var files in entryFiles)
+            {
+                m_hLabelCount.Text += count.ToString();
             }
         }
 

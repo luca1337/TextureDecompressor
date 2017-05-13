@@ -35,6 +35,7 @@
             this.m_hFolderLabel = new System.Windows.Forms.Label();
             this.m_hFolderTextBox = new System.Windows.Forms.TextBox();
             this.m_hListBox = new System.Windows.Forms.ListView();
+            this.m_hLabelCount = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -99,9 +100,18 @@
             this.m_hListBox.View = System.Windows.Forms.View.List;
             this.m_hListBox.SelectedIndexChanged += new System.EventHandler(this.m_hListBox_SelectedIndexChanged);
             // 
+            // m_hLabelCount
+            // 
+            this.m_hLabelCount.AutoSize = true;
+            this.m_hLabelCount.Location = new System.Drawing.Point(44, 123);
+            this.m_hLabelCount.Name = "m_hLabelCount";
+            this.m_hLabelCount.Size = new System.Drawing.Size(0, 17);
+            this.m_hLabelCount.TabIndex = 6;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(664, 260);
+            this.Controls.Add(this.m_hLabelCount);
             this.Controls.Add(this.m_hListBox);
             this.Controls.Add(this.m_hFolderTextBox);
             this.Controls.Add(this.m_hFolderLabel);
@@ -123,6 +133,7 @@
         private System.Windows.Forms.Label m_hFolderLabel;
         private System.Windows.Forms.TextBox m_hFolderTextBox;
         private System.Windows.Forms.ListView m_hListBox;
+        private System.Windows.Forms.Label m_hLabelCount;
     }
 }
 

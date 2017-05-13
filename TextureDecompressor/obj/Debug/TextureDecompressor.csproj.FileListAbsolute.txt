@@ -29,3 +29,34 @@ C:\Users\nb37\documents\visual studio 2017\Projects\TextureDecompressor\TextureD
 C:\Users\nb37\documents\visual studio 2017\Projects\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\UVDINERPROPS1.png
 C:\Users\nb37\documents\visual studio 2017\Projects\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\UVPostBarrel.png
 C:\Users\nb37\documents\visual studio 2017\Projects\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\WindmillUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\CartelliUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\CisternaPiattUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\CurrentPoleUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\FrigoriferoUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\GasFuel.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\PowerStationUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\PROPSUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\StationUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\TerrainGrass.jpg
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\Texture.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\TextureProps.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\TextureRoulotte.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\TreesUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\T_Sky_Blue.BMP
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\UVDINER1.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\UVDINERPROPS1.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\UVPostBarrel.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\WindmillUV.png
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\TextureDecompressor.exe.config
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\TextureDecompressor.exe
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\TextureDecompressor.pdb
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast2d.dll
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast3d.dll
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.dll
+D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.xml
+D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csprojResolveAssemblyReference.cache
+D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Form1.resources
+D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Properties.Resources.resources
+D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csproj.GenerateResource.Cache
+D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.exe
+D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.pdb
