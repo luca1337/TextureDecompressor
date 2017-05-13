@@ -17,7 +17,7 @@ namespace TextureDecompressor
     public partial class Form1 : Form
     {
         private string[] entryFiles;
-        private int count;
+        private int      count;
 
         public Form1()
         {
