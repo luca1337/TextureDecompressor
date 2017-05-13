@@ -21,8 +21,8 @@ namespace TextureDecompressor
         public Form1()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text += ".txt";
-            m_hFolderTextBox.Text += "OutputDecompressed";
+            m_hExtensionTextBox.Text    += ".txt";
+            m_hFolderTextBox.Text       += "OutputDecompressed";
             WindowRenderer.Init();
         }
 
@@ -43,26 +43,26 @@ namespace TextureDecompressor
                         m_hListBox.Items.Add(files);
                     }
 
-
-                    //try
-                    //{
-                    //    foreach (var file in entryFiles)
-                    //    {
-                    //        Texture texture = new Texture(file);
-                    //        string singleFileName = Path.GetFileNameWithoutExtension(file);
-                    //        File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text, texture.Bitmap);
-                    //    }
-                    //}
-                    //catch (Exception ex)
-                    //{
-                    //    MessageBox.Show(ex.Message);
-                    //}
+                    try
+                    {
+                        foreach (var file in entryFiles)
+                        {
+                            Texture texture = new Texture(file);
+                            string singleFileName = Path.GetFileNameWithoutExtension(file);
+                            File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text, texture.Bitmap);
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
             }
         }
 
         private void m_hListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            //Unused
         }
     }
 }
