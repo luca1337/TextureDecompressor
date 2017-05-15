@@ -59,7 +59,7 @@ namespace TextureDecompressor
                         {
                             count++;
                             if (count == entryFiles.Count())
-                                MessageBox.Show("All files have been decompressed\nYou can find them inside\nBin\\Debug");
+                                MessageBox.Show("All files have been decompressed\nYou can find them inside\nBin\\Debug", "Decompression Finished!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             Texture texture = new Texture(file);
                             string singleFileName = Path.GetFileNameWithoutExtension(file);
                             File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text, texture.Bitmap);
