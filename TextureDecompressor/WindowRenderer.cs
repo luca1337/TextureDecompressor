@@ -13,7 +13,8 @@ namespace TextureDecompressor
 
         public static void Init()
         {
-            window = new Window(1024, 300, "Decompressor");
+            window = new Window(1, 1, "Decompressor");
+            window.context.Exit();
         }
 
         public static void Update()

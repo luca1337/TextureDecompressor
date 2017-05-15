@@ -17,7 +17,7 @@ namespace TextureDecompressor
     public partial class Form1 : Form
     {
         private string[] entryFiles;
-        private int      count;
+        private int count;
 
         public Form1()
         {
@@ -40,15 +40,26 @@ namespace TextureDecompressor
 
                     foreach (var path in entryFiles)
                     {
+                        count++;
+                        if(count == entryFiles.Count())
+                        {
+                            count = 0;
+                            DialogResult eres = MessageBox.Show("All files are now selected\nDo you want to decompress them?");
+                            if (eres == DialogResult.OK)
+                                break;
+                        }
                         string files = Path.GetFileName(path);
+                        m_hLabelCount.Text = m_hListBox.Items.Count.ToString();
                         m_hListBox.Items.Add(files);
                         m_hLabelCount.TextChanged += M_hLabelCount_TextChanged;
                     }
-
                     try
                     {
                         foreach (var file in entryFiles)
                         {
+                            count++;
+                            if (count == entryFiles.Count())
+                                MessageBox.Show("All files have been decompressed\nYou can find them inside\nBin\\Debug");
                             Texture texture = new Texture(file);
                             string singleFileName = Path.GetFileNameWithoutExtension(file);
                             File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text, texture.Bitmap);
@@ -64,10 +75,6 @@ namespace TextureDecompressor
 
         private void M_hLabelCount_TextChanged(object sender, EventArgs e)
         {
-            foreach (var files in entryFiles)
-            {
-                m_hLabelCount.Text += count.ToString();
-            }
         }
 
         private void m_hListBox_SelectedIndexChanged(object sender, EventArgs e)
