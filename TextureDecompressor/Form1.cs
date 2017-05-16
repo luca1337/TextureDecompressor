@@ -17,8 +17,11 @@ namespace TextureDecompressor
 {
     public partial class Form1 : Form
     {
-        private string[] entryFiles;
-        private int count;
+        private string[]    entryFiles;
+        private int         count;
+        private const int   progress = 100;
+        private const int   step = 1;
+        private int     max; 
 
         public Form1()
         {
@@ -60,9 +63,17 @@ namespace TextureDecompressor
                     {
                         foreach (var file in entryFiles)
                         {
-                            count++;
-                            if (count == entryFiles.Count())
+                            m_hProgressBar.Step = 1;
+                            m_hProgressBar.Maximum = entryFiles.Count();
+                            max = m_hProgressBar.Value++;
+
+
+                            if (max + 1 == entryFiles.Count())
+                            {
                                 MessageBox.Show("All files have been decompressed\nYou can find them inside\nBin\\Debug", "Decompression Finished!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                max = 0;
+                            }
+
                             Texture texture = new Texture(file);
                             string singleFileName = Path.GetFileNameWithoutExtension(file);
                             File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text, texture.Bitmap);
@@ -78,6 +89,7 @@ namespace TextureDecompressor
 
         private void M_hLabelCount_TextChanged(object sender, EventArgs e)
         {
+            //Unused
         }
 
         private void m_hListBox_SelectedIndexChanged(object sender, EventArgs e)

@@ -54,7 +54,6 @@ D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast2d.dll
 D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast3d.dll
 D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.dll
 D:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.xml
-D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csprojResolveAssemblyReference.cache
 D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Form1.resources
 D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Properties.Resources.resources
 D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csproj.GenerateResource.Cache

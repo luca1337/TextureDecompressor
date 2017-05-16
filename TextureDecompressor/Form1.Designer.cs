@@ -37,7 +37,8 @@
             this.m_hListBox = new System.Windows.Forms.ListView();
             this.m_hLabelCount = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.m_hProgressBar = new System.Windows.Forms.ProgressBar();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // button1
@@ -67,7 +68,7 @@
             // m_hExtensionLabel
             // 
             this.m_hExtensionLabel.AutoSize = true;
-            this.m_hExtensionLabel.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.m_hExtensionLabel.BackColor = System.Drawing.SystemColors.Control;
             this.m_hExtensionLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.m_hExtensionLabel.Location = new System.Drawing.Point(13, 27);
             this.m_hExtensionLabel.Name = "m_hExtensionLabel";
@@ -115,21 +116,32 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.Size = new System.Drawing.Size(94, 17);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Files Count";
+            this.label1.Text = "Files Count:";
             // 
-            // progressBar1
+            // m_hProgressBar
             // 
-            this.progressBar1.Location = new System.Drawing.Point(19, 216);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(253, 23);
-            this.progressBar1.TabIndex = 8;
+            this.m_hProgressBar.Location = new System.Drawing.Point(19, 216);
+            this.m_hProgressBar.Name = "m_hProgressBar";
+            this.m_hProgressBar.Size = new System.Drawing.Size(253, 23);
+            this.m_hProgressBar.Step = 1;
+            this.m_hProgressBar.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(117, 192);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(73, 17);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "Progress";
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(664, 260);
-            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.m_hProgressBar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.m_hLabelCount);
             this.Controls.Add(this.m_hListBox);
@@ -156,7 +168,8 @@
         private System.Windows.Forms.ListView m_hListBox;
         private System.Windows.Forms.Label m_hLabelCount;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar m_hProgressBar;
+        private System.Windows.Forms.Label label2;
     }
 }
 
