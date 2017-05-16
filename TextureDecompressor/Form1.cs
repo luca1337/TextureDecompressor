@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Aiv.Fast2D;
+using System.Diagnostics;
 
 namespace TextureDecompressor
 {
@@ -22,8 +23,8 @@ namespace TextureDecompressor
         public Form1()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text += ".txt";
-            m_hFolderTextBox.Text += "OutputDecompressed";
+            m_hExtensionTextBox.Text    += ".txt";
+            m_hFolderTextBox.Text       += "OutputDecompressed";
             WindowRenderer.Init();
         }
 
@@ -44,9 +45,11 @@ namespace TextureDecompressor
                         if(count == entryFiles.Count())
                         {
                             count = 0;
-                            DialogResult eres = MessageBox.Show("All files are now selected\nDo you want to decompress them?");
+                            DialogResult eres = MessageBox.Show("All files are now selected\nDo you want to decompress them?\nPress OK to compute decompression\nOr CANCEL to abort.", "Path Found!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
                             if (eres == DialogResult.OK)
-                                break;
+                                continue;
+                            else if (eres == DialogResult.Cancel)
+                                Process.GetCurrentProcess().Kill();
                         }
                         string files = Path.GetFileName(path);
                         m_hLabelCount.Text = m_hListBox.Items.Count.ToString();

@@ -36,6 +36,8 @@
             this.m_hFolderTextBox = new System.Windows.Forms.TextBox();
             this.m_hListBox = new System.Windows.Forms.ListView();
             this.m_hLabelCount = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // button1
@@ -103,14 +105,32 @@
             // m_hLabelCount
             // 
             this.m_hLabelCount.AutoSize = true;
-            this.m_hLabelCount.Location = new System.Drawing.Point(44, 123);
+            this.m_hLabelCount.Location = new System.Drawing.Point(122, 125);
             this.m_hLabelCount.Name = "m_hLabelCount";
             this.m_hLabelCount.Size = new System.Drawing.Size(0, 17);
             this.m_hLabelCount.TabIndex = 6;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(16, 125);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(89, 17);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "Files Count";
+            // 
+            // progressBar1
+            // 
+            this.progressBar1.Location = new System.Drawing.Point(19, 216);
+            this.progressBar1.Name = "progressBar1";
+            this.progressBar1.Size = new System.Drawing.Size(253, 23);
+            this.progressBar1.TabIndex = 8;
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(664, 260);
+            this.Controls.Add(this.progressBar1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.m_hLabelCount);
             this.Controls.Add(this.m_hListBox);
             this.Controls.Add(this.m_hFolderTextBox);
@@ -118,6 +138,7 @@
             this.Controls.Add(this.m_hExtensionLabel);
             this.Controls.Add(this.m_hExtensionTextBox);
             this.Controls.Add(this.button2);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Form1";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -134,6 +155,8 @@
         private System.Windows.Forms.TextBox m_hFolderTextBox;
         private System.Windows.Forms.ListView m_hListBox;
         private System.Windows.Forms.Label m_hLabelCount;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ProgressBar progressBar1;
     }
 }
 
