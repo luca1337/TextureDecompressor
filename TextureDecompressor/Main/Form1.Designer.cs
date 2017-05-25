@@ -1,6 +1,6 @@
 ﻿namespace TextureDecompressor
 {
-    partial class Form1
+    partial class TextureDecompressor
     {
         /// <summary>
         /// Variabile di progettazione necessaria.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TextureDecompressor));
             this.button1 = new System.Windows.Forms.Button();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.m_hExtensionTextBox = new System.Windows.Forms.TextBox();
@@ -136,7 +137,7 @@
             this.label2.TabIndex = 9;
             this.label2.Text = "Progress";
             // 
-            // Form1
+            // TextureDecompressor
             // 
             this.ClientSize = new System.Drawing.Size(664, 260);
             this.Controls.Add(this.label2);
@@ -150,7 +151,12 @@
             this.Controls.Add(this.m_hExtensionTextBox);
             this.Controls.Add(this.BrowseButton);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Name = "Form1";
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(680, 299);
+            this.Name = "TextureDecompressor";
+            this.Opacity = 0.8D;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.ResumeLayout(false);
             this.PerformLayout();
 

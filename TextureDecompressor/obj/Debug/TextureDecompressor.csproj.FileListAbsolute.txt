@@ -59,6 +59,7 @@ D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.
 D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csproj.GenerateResource.Cache
 D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.exe
 D:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.pdb
+E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Resources\Extract.ico
 E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\CartelliUV.png
 E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\CisternaPiattUV.png
 E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Textures\CurrentPoleUV.png
@@ -84,8 +85,7 @@ E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast2d.dll
 E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast3d.dll
 E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.dll
 E:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.xml
-E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csprojResolveAssemblyReference.cache
-E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Form1.resources
+E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.TextureDecompressor.resources
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Properties.Resources.resources
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csproj.GenerateResource.Cache
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.exe

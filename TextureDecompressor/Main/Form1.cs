@@ -15,7 +15,7 @@ using System.Diagnostics;
 
 namespace TextureDecompressor
 {
-    public partial class Form1 : Form
+    public partial class TextureDecompressor : Form
     {
         private string[]    entryFiles;
         private int         count;
@@ -23,7 +23,7 @@ namespace TextureDecompressor
         private const int   step = 1;
         private int         max; 
 
-        public Form1()
+        public TextureDecompressor()
         {
             InitializeComponent();
             m_hExtensionTextBox.Text    += ".txt";
