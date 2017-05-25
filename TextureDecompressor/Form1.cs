@@ -26,8 +26,8 @@ namespace TextureDecompressor
         public Form1()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text    += @".txt";
-            m_hFolderTextBox.Text       += @"OutputDecompressed";
+            m_hExtensionTextBox.Text    += ".txt";
+            m_hFolderTextBox.Text       += "OutputDecompressed";
             WindowRenderer.Init();
         }
 
@@ -37,73 +37,68 @@ namespace TextureDecompressor
             {
                 DialogResult eRes = browser.ShowDialog();
 
-
-                if (eRes != DialogResult.OK || string.IsNullOrWhiteSpace(browser.SelectedPath)) return;
-                entryFiles = Directory.GetFiles(browser.SelectedPath);
-                DirectoryInfo dirInfo = Directory.CreateDirectory(m_hFolderTextBox.Text);
-
-
-                foreach (var path in entryFiles)
+                if (string.IsNullOrEmpty(m_hFolderTextBox.Text))
                 {
-                    count++;
-                    if(count == entryFiles.Length)
+                    MessageBox.Show("Folder Name can't be null or empty", "Invalid Folder Name!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (string.IsNullOrEmpty(m_hExtensionLabel.Text))
+                {
+                    MessageBox.Show("Extension Name can't be null or empty", "Invalid Extension Name!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                if (eRes == DialogResult.OK && !string.IsNullOrWhiteSpace(browser.SelectedPath))
+                {
+                    entryFiles = Directory.GetFiles(browser.SelectedPath);
+                    DirectoryInfo dirInfo = Directory.CreateDirectory(m_hFolderTextBox.Text);
+
+                    foreach (var path in entryFiles)
                     {
-                        count = 0;
-                        DialogResult eres = MessageBox.Show("All files are now selected\n" +
-                                                            "Do you want to decompress them?\n" +
-                                                            "Press OK to compute decompression\n" +
-                                                            "Or CANCEL to abort.", "Path Found!", 
-                                                            MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-                        switch (eres)
+                        count++;
+                        if(count == entryFiles.Count())
                         {
-                            case DialogResult.OK:
-                                continue;
-                            case DialogResult.Cancel:
-                                Process.GetCurrentProcess().Kill();
-                                break;
+                            count = 0;
+                            DialogResult eres = MessageBox.Show("All files are now selected\nDo you want to decompress them?\nPress OK to compute decompression\nOr CANCEL to abort.", "Path Found!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                            switch (eres)
+                            {
+                                case DialogResult.OK:
+                                    continue;
+                                case DialogResult.Cancel:
+                                    Process.GetCurrentProcess().Kill();
+                                    break;
+                            }
+                        }
+                        string files = Path.GetFileName(path);
+                        m_hLabelCount.Text = m_hListBox.Items.Count.ToString();
+                        m_hListBox.Items.Add(files);
+                        m_hLabelCount.TextChanged += M_hLabelCount_TextChanged;
+                    }
+                    try
+                    {
+                        foreach (var file in entryFiles)
+                        {
+                            m_hProgressBar.Step = 1;
+                            m_hProgressBar.Maximum = entryFiles.Count();
+                            max = m_hProgressBar.Value++;
+
+
+                            if (max + 1 == entryFiles.Length)
+                            {
+                                MessageBox.Show("All files have been decompressed\nYou can find them inside\nBin\\Debug", "Decompression Finished!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                                max = 0;
+                            }
+
+                            Texture texture = new Texture(file);
+                            string singleFileName = Path.GetFileNameWithoutExtension(file);
+                            File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text, texture.Bitmap);
                         }
                     }
-                    string files = Path.GetFileName(path);
-                    m_hLabelCount.Text = m_hListBox.Items.Count.ToString();
-                    m_hListBox.Items.Add(files);
-                    m_hLabelCount.TextChanged += M_hLabelCount_TextChanged;
-                }
-                try
-                {
-                    if (string.IsNullOrEmpty(m_hExtensionLabel.Text))
-                        MessageBox.Show("Extension can't be null or empty!",
-                            "Invalid Extension!", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-
-                    if (string.IsNullOrEmpty(m_hFolderTextBox.Text))
-                        MessageBox.Show("Folder name can't be null or empty",
-                            "Invalid Folder Name!", MessageBoxButtons.OK,
-                            MessageBoxIcon.Warning);
-
-                    foreach (string file in entryFiles)
+                    catch (Exception ex)
                     {
-                        m_hProgressBar.Step = 1;
-                        m_hProgressBar.Maximum = entryFiles.Length;
-                        max = m_hProgressBar.Value++;
-
-
-                        if (max + 1 == entryFiles.Length)
-                        {
-                            MessageBox.Show("All files have been decompressed\n" +
-                                            "You can find them inside\nBin\\Debug", 
-                                            "Decompression Finished!", MessageBoxButtons.OK, 
-                                            MessageBoxIcon.Information);
-                            max = 0;
-                        }
-
-                        Texture texture = new Texture(file);
-                        string singleFileName = Path.GetFileNameWithoutExtension(file);
-                        File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text, texture.Bitmap);
+                        MessageBox.Show(ex.Message);
                     }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
                 }
             }
         }
