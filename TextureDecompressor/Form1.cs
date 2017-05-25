@@ -37,9 +37,11 @@ namespace TextureDecompressor
             {
                 DialogResult eRes = browser.ShowDialog();
 
+
                 if (eRes != DialogResult.OK || string.IsNullOrWhiteSpace(browser.SelectedPath)) return;
                 entryFiles = Directory.GetFiles(browser.SelectedPath);
                 DirectoryInfo dirInfo = Directory.CreateDirectory(m_hFolderTextBox.Text);
+
 
                 foreach (var path in entryFiles)
                 {
@@ -68,6 +70,16 @@ namespace TextureDecompressor
                 }
                 try
                 {
+                    if (string.IsNullOrEmpty(m_hExtensionLabel.Text))
+                        MessageBox.Show("Extension can't be null or empty!",
+                            "Invalid Extension!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+
+                    if (string.IsNullOrEmpty(m_hFolderTextBox.Text))
+                        MessageBox.Show("Folder name can't be null or empty",
+                            "Invalid Folder Name!", MessageBoxButtons.OK,
+                            MessageBoxIcon.Warning);
+
                     foreach (string file in entryFiles)
                     {
                         m_hProgressBar.Step = 1;
