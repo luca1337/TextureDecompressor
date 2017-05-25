@@ -45,7 +45,8 @@ namespace TextureDecompressor
 
                 if (string.IsNullOrEmpty(m_hExtensionTextBox.Text))
                 {
-                    MessageBox.Show("Extension Name can't be null or empty", "Invalid Extension Name!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Extension Name can't be null or empty",
+                        "Invalid Extension Name!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
@@ -59,7 +60,11 @@ namespace TextureDecompressor
                     if(count == entryFiles.Length)
                     {
                         count = 0;
-                        DialogResult eres = MessageBox.Show("All files are now selected\nDo you want to decompress them?\nPress OK to compute decompression\nOr CANCEL to abort.", "Path Found!", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+                        DialogResult eres = MessageBox.Show("All files are now selected\n" +
+                                                            "Do you want to decompress them?\n" +
+                                                            "Press OK to compute decompression\n" +
+                                                            "Or CANCEL to abort.", "Path Found!", MessageBoxButtons.OKCancel, 
+                                                            MessageBoxIcon.Question);
                         switch (eres)
                         {
                             case DialogResult.OK:
@@ -72,7 +77,6 @@ namespace TextureDecompressor
                     string files = Path.GetFileName(path);
                     m_hLabelCount.Text = m_hListBox.Items.Count.ToString();
                     m_hListBox.Items.Add(files);
-                    m_hLabelCount.TextChanged += M_hLabelCount_TextChanged;
                 }
                 try
                 {
@@ -85,8 +89,10 @@ namespace TextureDecompressor
 
                         if (max + 1 == entryFiles.Length)
                         {
-                            MessageBox.Show("All files have been decompressed\nYou can find them inside\nBin\\Debug",
-                                "Decompression Finished!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show("All files have been decompressed\n" +
+                                            "You can find them inside\nBin\\Debug",
+                                            "Decompression Finished!", MessageBoxButtons.OK, 
+                                            MessageBoxIcon.Information);
                             max = 0;
                         }
 
@@ -106,16 +112,6 @@ namespace TextureDecompressor
                     count = 0;
                 }
             }
-        }
-
-        private void M_hLabelCount_TextChanged(object sender, EventArgs e)
-        {
-            //Unused
-        }
-
-        private void m_hListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            //Unused
         }
     }
 }

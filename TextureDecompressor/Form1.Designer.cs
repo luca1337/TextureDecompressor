@@ -101,7 +101,6 @@
             this.m_hListBox.TabIndex = 5;
             this.m_hListBox.UseCompatibleStateImageBehavior = false;
             this.m_hListBox.View = System.Windows.Forms.View.List;
-            this.m_hListBox.SelectedIndexChanged += new System.EventHandler(this.m_hListBox_SelectedIndexChanged);
             // 
             // m_hLabelCount
             // 
