@@ -16,7 +16,7 @@ namespace TextureDecompressor
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TextureDecompressor());
+            Application.Run(new Main.TextureDecompressor());
         }
     }
 }

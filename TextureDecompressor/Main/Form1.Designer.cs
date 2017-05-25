@@ -1,4 +1,4 @@
-﻿namespace TextureDecompressor
+﻿namespace TextureDecompressor.Main
 {
     partial class TextureDecompressor
     {

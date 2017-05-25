@@ -1,19 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Reflection;
-using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Aiv.Fast2D;
-using System.Diagnostics;
 
-namespace TextureDecompressor
+namespace TextureDecompressor.Main
 {
     public partial class TextureDecompressor : Form
     {
@@ -39,7 +31,8 @@ namespace TextureDecompressor
 
                 if (string.IsNullOrEmpty(m_hFolderTextBox.Text))
                 {
-                    MessageBox.Show("Folder Name can't be null or empty", "Invalid Folder Name!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Folder Name can't be null or empty", 
+                        "Invalid Folder Name!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
