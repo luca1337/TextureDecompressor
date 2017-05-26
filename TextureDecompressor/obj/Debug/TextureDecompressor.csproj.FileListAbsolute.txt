@@ -90,3 +90,4 @@ E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csproj.GenerateResource.Cache
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.exe
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.pdb
+E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csprojResolveAssemblyReference.cache
