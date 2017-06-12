@@ -18,7 +18,7 @@ namespace TextureDecompressor.Main
         public TextureDecompressor()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text    += ".txt";
+            m_hExtensionTextBox.Text    += "txt";
             m_hFolderTextBox.Text       += "OutputDecompressed";
             WindowRenderer.Init();
         }
