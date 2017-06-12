@@ -18,7 +18,7 @@ namespace TextureDecompressor.Main
         public TextureDecompressor()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text    += "txt";
+            m_hExtensionTextBox.Text    += ".txt";
             m_hFolderTextBox.Text       += "OutputDecompressed";
             WindowRenderer.Init();
         }
@@ -91,8 +91,17 @@ namespace TextureDecompressor.Main
 
                         Texture texture = new Texture(file);
                         string singleFileName = Path.GetFileNameWithoutExtension(file);
+
+                        Byte[] textureWidth = BitConverter.GetBytes(texture.Width);
+                        Byte[] textureHeight = BitConverter.GetBytes(texture.Height);
+                        Byte[] toWrite = new Byte[textureWidth.Length + textureHeight.Length + texture.Bitmap.Length];
+
+                        textureWidth.CopyTo(toWrite, 0);
+                        textureHeight.CopyTo(toWrite, textureWidth.Length);
+                        texture.Bitmap.CopyTo(toWrite, textureHeight.Length);
+
                         File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text,
-                            texture.Bitmap);
+                            toWrite);
                     }
                 }
                 catch (Exception ex)
