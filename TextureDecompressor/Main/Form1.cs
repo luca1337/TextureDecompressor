@@ -105,9 +105,6 @@ namespace TextureDecompressor.Main
 
                             fs.Write(toWrite, 0, toWrite.Length);
                         }
-
-                        //File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text,
-                        //    toWrite);
                     }
                 }
                 catch (Exception ex)
