@@ -91,3 +91,6 @@ E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.exe
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.pdb
 E:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csprojResolveAssemblyReference.cache
+C:\Users\Matteo B\Documents\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\TextureDecompressor.exe.config
+C:\Users\Matteo B\Documents\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.exe
+C:\Users\Matteo B\Documents\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.pdb
