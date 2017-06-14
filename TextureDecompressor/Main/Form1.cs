@@ -9,17 +9,17 @@ namespace TextureDecompressor.Main
 {
     public partial class TextureDecompressor : Form
     {
-        private string[]    entryFiles;
-        private int         count;
-        private const int   progress = 100;
-        private const int   step = 1;
-        private int         max; 
+        private string[] entryFiles;
+        private int count;
+        private const int progress = 100;
+        private const int step = 1;
+        private int max;
 
         public TextureDecompressor()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text    += ".txt";
-            m_hFolderTextBox.Text       += "OutputDecompressed";
+            m_hExtensionTextBox.Text += ".txt";
+            m_hFolderTextBox.Text += "OutputDecompressed";
             WindowRenderer.Init();
         }
 
@@ -31,7 +31,7 @@ namespace TextureDecompressor.Main
 
                 if (string.IsNullOrEmpty(m_hFolderTextBox.Text))
                 {
-                    MessageBox.Show("Folder Name can't be null or empty", 
+                    MessageBox.Show("Folder Name can't be null or empty",
                         "Invalid Folder Name!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
@@ -50,13 +50,13 @@ namespace TextureDecompressor.Main
                 foreach (var path in entryFiles)
                 {
                     count++;
-                    if(count == entryFiles.Length)
+                    if (count == entryFiles.Length)
                     {
                         count = 0;
                         DialogResult eres = MessageBox.Show("All files are now selected\n" +
                                                             "Do you want to decompress them?\n" +
                                                             "Press OK to compute decompression\n" +
-                                                            "Or CANCEL to abort.", "Path Found!", MessageBoxButtons.OKCancel, 
+                                                            "Or CANCEL to abort.", "Path Found!", MessageBoxButtons.OKCancel,
                                                             MessageBoxIcon.Question);
                         switch (eres)
                         {
@@ -84,7 +84,7 @@ namespace TextureDecompressor.Main
                         {
                             MessageBox.Show("All files have been decompressed\n" +
                                             "You can find them inside\nBin\\Debug",
-                                            "Decompression Finished!", MessageBoxButtons.OK, 
+                                            "Decompression Finished!", MessageBoxButtons.OK,
                                             MessageBoxIcon.Information);
                             max = 0;
                         }
@@ -92,16 +92,22 @@ namespace TextureDecompressor.Main
                         Texture texture = new Texture(file);
                         string singleFileName = Path.GetFileNameWithoutExtension(file);
 
-                        Byte[] textureWidth = BitConverter.GetBytes(texture.Width);
-                        Byte[] textureHeight = BitConverter.GetBytes(texture.Height);
-                        Byte[] toWrite = new Byte[textureWidth.Length + textureHeight.Length + texture.Bitmap.Length];
+                        using (FileStream fs = File.OpenWrite(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text))
+                        {
+                            byte[] toWrite = new byte[sizeof(int) * 2 + texture.Bitmap.Length];
 
-                        textureWidth.CopyTo(toWrite, 0);
-                        textureHeight.CopyTo(toWrite, textureWidth.Length);
-                        texture.Bitmap.CopyTo(toWrite, textureHeight.Length);
+                            byte[] widthAsBytes = BitConverter.GetBytes(texture.Width);
+                            byte[] heightAsBytes = BitConverter.GetBytes(texture.Height);
 
-                        File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text,
-                            toWrite);
+                            widthAsBytes.CopyTo(toWrite, 0);
+                            heightAsBytes.CopyTo(toWrite, 4);
+                            texture.Bitmap.CopyTo(toWrite, 8);
+
+                            fs.Write(toWrite, 0, toWrite.Length);
+                        }
+
+                        //File.WriteAllBytes(dirInfo.Name + "/" + singleFileName + "." + m_hExtensionTextBox.Text,
+                        //    toWrite);
                     }
                 }
                 catch (Exception ex)
