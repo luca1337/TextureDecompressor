@@ -18,7 +18,7 @@ namespace TextureDecompressor.Main
         public TextureDecompressor()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text += ".txt";
+            m_hExtensionTextBox.Text += "txt";
             m_hFolderTextBox.Text += "OutputDecompressed";
             WindowRenderer.Init();
         }
@@ -49,7 +49,11 @@ namespace TextureDecompressor.Main
 
                 foreach (var path in entryFiles)
                 {
+                    string files = Path.GetFileName(path);
+                    m_hLabelCount.Text = m_hListBox.Items.Count.ToString();
+                    m_hListBox.Items.Add(files);
                     count++;
+
                     if (count == entryFiles.Length)
                     {
                         count = 0;
@@ -67,9 +71,6 @@ namespace TextureDecompressor.Main
                                 break;
                         }
                     }
-                    string files = Path.GetFileName(path);
-                    m_hLabelCount.Text = m_hListBox.Items.Count.ToString();
-                    m_hListBox.Items.Add(files);
                 }
                 try
                 {
