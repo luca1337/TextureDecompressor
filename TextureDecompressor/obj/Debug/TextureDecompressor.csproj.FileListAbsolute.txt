@@ -105,3 +105,17 @@ C:\Users\Matteo B\Documents\GitHub\TextureDecompressor\TextureDecompressor\obj\D
 C:\Users\Matteo B\Documents\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Main.TextureDecompressor.resources
 C:\Users\Matteo B\Documents\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Properties.Resources.resources
 C:\Users\Matteo B\Documents\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csproj.GenerateResource.Cache
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\Resources\Extract.ico
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\TextureDecompressor.exe.config
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\TextureDecompressor.exe
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\TextureDecompressor.pdb
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast2d.dll
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\aiv-fast3d.dll
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.dll
+F:\GitHub\TextureDecompressor\TextureDecompressor\bin\Debug\OpenTK.xml
+F:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csprojResolveAssemblyReference.cache
+F:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Main.TextureDecompressor.resources
+F:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.Properties.Resources.resources
+F:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.csproj.GenerateResource.Cache
+F:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.exe
+F:\GitHub\TextureDecompressor\TextureDecompressor\obj\Debug\TextureDecompressor.pdb

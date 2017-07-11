@@ -9,17 +9,17 @@ namespace TextureDecompressor.Main
 {
     public partial class TextureDecompressor : Form
     {
-        private string[] entryFiles;
-        private int count;
-        private const int progress = 100;
-        private const int step = 1;
-        private int max;
+        private string[]        entryFiles;
+        private int             count;
+        private const int       progress    = 100;
+        private const int       step        = 1;
+        private int             max;
 
         public TextureDecompressor()
         {
             InitializeComponent();
-            m_hExtensionTextBox.Text += "txt";
-            m_hFolderTextBox.Text += "OutputDecompressed";
+            m_hExtensionTextBox.Text    = "txt";
+            m_hFolderTextBox.Text       = "OutputDecomp";
             WindowRenderer.Init();
         }
 
